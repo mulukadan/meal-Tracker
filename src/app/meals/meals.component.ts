@@ -24,6 +24,7 @@ export class MealsComponent implements OnInit {
   addMeal(MealName:string, MealDesc:string, MealCalories:number) {
     if(MealName.length>1){
       this.meals.push(new Meal(MealName, MealDesc, MealCalories));
+
     } else{
       alert("INVALID INPUT!!")
     }
