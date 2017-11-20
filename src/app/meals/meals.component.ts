@@ -15,22 +15,18 @@ export class MealsComponent implements OnInit {
       new Meal('Andazi','Circular',200),
       new Meal('Chapati','Circular',200),
   ];
-
-      this.addMeal(new Meal('Mukimo','Veg',500));
-    // {Name: 'Andazi', Desc:'Triangula', Calories:700},
-    // {Name: 'Pilau', Desc:'Rice', Calories:500},
-    // {Name: 'Chips', Desc:'Potatoes', Calories:348}
-   }
+}
 
   ngOnInit() {
 
   }
-  onClick(){
-    // newMail = new Meal('Chapati','Circular',200);
-    this.addMeal(new Meal('Mukimo','Veg',340));
-  }
-  addMeal(meal: Meal) {
-    this.meals.push(meal);
-  }
 
+  addMeal(MealName:string, MealDesc:string, MealCalories:number) {
+    if(MealName.length>1){
+      this.meals.push(new Meal(MealName, MealDesc, MealCalories));
+    } else{
+      alert("INVALID INPUT!!")
+    }
+
+  }
 }

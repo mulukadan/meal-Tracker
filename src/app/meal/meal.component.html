@@ -1,7 +1,6 @@
   <h3>Add New Meal:</h3>
 
   <div>
-    <form>
         Meal Name:
         <input type="text" name="MealName" placeholder="Chapati" >
         <br>
@@ -9,9 +8,7 @@
         <input type="text" name="MealDesc" placeholder="Desc.">
         <br>
         Calories:
-        <input type="number" name="MealCalories" placeholder="0">
+        <input type="number" #MealCalories placeholder="0">
         <br>
-        <button (click)="addMeal()">Add Meal</button>
-      </form>
-
+        <button (click)="addMeal(MealName.value)">Add Meal</button>
   </div>

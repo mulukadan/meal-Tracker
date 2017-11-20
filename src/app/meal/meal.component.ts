@@ -9,16 +9,22 @@ import { MealsComponent } from '../meals/meals.component';
   styleUrls: ['./meal.component.css']
 })
 export class MealComponent implements OnInit {
-  // msc: MealsComponent;
+   msc: MealsComponent = new MealsComponent();
   constructor() {
-    // msc: MealsComponent;
+    
    }
 
   ngOnInit() {
-    // msc: new MealsComponent();
+
   }
 
   newMail: Meal = new Meal('Chapati','Circular',200);
   // msc.addMeal(newMail);
+  addMeal(MealName:string){
+     //this.msc.addMeal(new Meal('Chapati','Circular',200));
+
+     this.msc.addMeal(MealName,'Veg',340);
+
+  }
 
 }
