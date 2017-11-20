@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Meal } from '../meal';
+import { MealsComponent } from '../meals/meals.component';
+
 
 @Component({
   selector: 'app-meal',
@@ -6,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./meal.component.css']
 })
 export class MealComponent implements OnInit {
-
-  constructor() { }
+  // msc: MealsComponent;
+  constructor() {
+    // msc: MealsComponent;
+   }
 
   ngOnInit() {
+    // msc: new MealsComponent();
   }
+
+  newMail: Meal = new Meal('Chapati','Circular',200);
+  // msc.addMeal(newMail);
 
 }

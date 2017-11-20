@@ -1,3 +1,9 @@
-<p>
-  meals works!
-</p>
+<button (click)="onClick()">Add New Meal</button>
+
+<h3>Meals' List</h3>
+<ul class="Meals">
+  <li *ngFor="let meal of meals">
+
+    <span>{{meal.name}}</span> {{meal.description}} {{meal.calories}}
+  </li>
+</ul>
