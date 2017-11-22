@@ -1,8 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-</div>
-
-  <app-meals></app-meals>
+<div class="container">
+  <div class="container" style="text-align:center">
+    <h1>
+      Welcome to {{title}}!
+    </h1>
+  </div>
+  <app-add-meal
+    (newMealSender)="addMeal($event)"
+  ></app-add-meal>
+  <app-display
+    [childMealList]="MealsList"
+  ></app-display>
+  </div>

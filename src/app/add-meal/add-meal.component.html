@@ -1,0 +1,26 @@
+<h2>New Meal</h2>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Meal:</label>
+    <div class="col-sm-10">
+      <input class="form-control" #MealName>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Description:</label>
+    <div class="col-sm-10">
+      <input class="form-control" #MealDesc>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Calories:</label>
+    <div class="col-sm-10">
+      <input class="form-control" #MealCalories>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button (click)="AddClicked(MealName.value, MealDesc.value, MealCalories.value)" class="btn btn-default">Add Meal</button>
+    </div>
+  </div>

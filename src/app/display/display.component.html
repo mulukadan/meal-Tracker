@@ -1,0 +1,9 @@
+
+  <h1>MEALS' LIST!</h1>
+
+<div *ngFor="let currentMeal of childMealList">
+      <h2>Name: {{ currentMeal.name }}</h2>
+      <h3>Description: {{ currentMeal.description }}</h3>
+      <h4>Calories: {{ currentMeal.calories }}</h4>
+       <button (click)="editButtonHasBeenClicked(currentMeal)">Edit</button>
+    </div>
