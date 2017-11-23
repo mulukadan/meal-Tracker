@@ -5,10 +5,26 @@
       Welcome to {{title}}!
     </h1>
   </div>
-  <app-add-meal
-    (newMealSender)="addMeal($event)"
-  ></app-add-meal>
-  <app-display
-    [childMealList]="MealsList"
-  ></app-display>
+  <div class="row">
+    <div class="col-sm-3" style="background-color:lavender;">
+      <app-add-meal
+        (newMealSender)="addMeal($event)"
+      ></app-add-meal>
+    </div>
+    <div class="col-sm-6" style="background-color:lavenderblush;">
+      <app-display
+        [childMealList]="MealsList"
+        (clickSender)="showDetails($event)"
+        (delSender)="deleteMeal($event)">
+      ></app-display>
+    </div>
+    <div class="col-sm-3" style="background-color:lavender;">
+      <app-edit-meal
+        [childSelectedMeal]="selectedMeal"
+        (doneClickedSender)= "finishedEditing()"
+      ></app-edit-meal>
+    </div>
+
+  </div>
+
   </div>

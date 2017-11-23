@@ -21,6 +21,12 @@
 
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button (click)="AddClicked(MealName.value, MealDesc.value, MealCalories.value)" class="btn btn-default">Add Meal</button>
+      <button (click)="
+      AddClicked(MealName.value, MealDesc.value, MealCalories.value);
+      MealName.value = '';
+      MealDesc.value = '';
+      MealCalories.value = '';
+
+      " class="btn btn-warning">Add Meal</button>
     </div>
   </div>

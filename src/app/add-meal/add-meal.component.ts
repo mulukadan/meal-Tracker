@@ -14,7 +14,12 @@ export class AddMealComponent implements OnInit {
   }
   @Output() newMealSender = new EventEmitter();
   AddClicked(MealName: string, MealDesc: string, MealCalories: number){
-    var newMealToAdd: Meal = new Meal(MealName, MealDesc, MealCalories);
-    this.newMealSender.emit(newMealToAdd);
+    if(MealName.length>1){
+      var newMealToAdd: Meal = new Meal(MealName, MealDesc, MealCalories);
+      this.newMealSender.emit(newMealToAdd);
+    }else{
+      alert("INVALID INPUT!!");
+    }
+
   }
 }

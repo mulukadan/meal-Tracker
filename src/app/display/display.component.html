@@ -1,9 +1,56 @@
 
-  <h1>MEALS' LIST!</h1>
 
-<div *ngFor="let currentMeal of childMealList">
-      <h2>Name: {{ currentMeal.name }}</h2>
-      <h3>Description: {{ currentMeal.description }}</h3>
-      <h4>Calories: {{ currentMeal.calories }}</h4>
-       <button (click)="editButtonHasBeenClicked(currentMeal)">Edit</button>
+  <div class="" style="text-align:center">
+      <h1>MEALS' LIST!</h1>
+  </div>
+  <div class="row">
+    <h4>Level of Calories to Display: </h4>
+    <select (change)="onChange($event.target.value)">
+      <option value="all" selected="selected">Show All</option>
+      <option value="high">Calories > 500</option>
+      <option value="low" >Calories < 500</option>
+    </select>
+  </div>
+
+
+  <div class="row">
+    <div class="col-sm-3" style="background-color:lavender;">
+      <h4>Name:</h4>
     </div>
+    <div class="col-sm-3" style="background-color:lavender;">
+      <h4>Description:</h4>
+    </div>
+    <div class="col-sm-3" style="background-color:lavender;">
+      <h4>Calories: </h4>
+    </div>
+    <div class="col-sm-3" style="background-color:lavender;">
+      <h4>Action</h4>
+    </div>
+  </div>
+  <hr size=6>
+
+<div *ngFor="let currentMeal of childMealList | caloriesLevel:selectedCaloriesLevel">
+
+  <div class="row">
+    <div class="col-sm-3" style="background-color:lavender;">
+      <h5>{{ currentMeal.name }}</h5>
+    </div>
+    <div class="col-sm-3" style="background-color:lavender;">
+      <h5>{{ currentMeal.description }}</h5>
+    </div>
+    <div class="col-sm-3" style="background-color:lavender;">
+      <h5>{{ currentMeal.calories }}</h5>
+    </div>
+    <div class="col-sm-3" style="background-color:lavender;">
+      <div class="row">
+        <div class="col-sm-5" style="background-color:lavender;">
+            <button (click)="editButtonHasBeenClicked(currentMeal)">Edit</button>
+        </div>
+        <div class="col-sm-7" style="background-color:lavender;">
+            <button (click)="deleteButtonHasBeenClicked(currentMeal)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr size=4>
+</div>

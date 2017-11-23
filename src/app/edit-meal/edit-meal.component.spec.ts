@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WditMealComponent } from './wdit-meal.component';
+import { EditMealComponent } from './edit-meal.component';
 
-describe('WditMealComponent', () => {
-  let component: WditMealComponent;
-  let fixture: ComponentFixture<WditMealComponent>;
+describe('EditMealComponent', () => {
+  let component: EditMealComponent;
+  let fixture: ComponentFixture<EditMealComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WditMealComponent ]
+      declarations: [ EditMealComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WditMealComponent);
+    fixture = TestBed.createComponent(EditMealComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

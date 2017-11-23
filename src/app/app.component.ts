@@ -13,9 +13,18 @@ export class AppComponent {
      new Meal("Sukuma", "Greens", 780),
      new Meal("Chips", "Fries", 250)
  ];
-
+ selectedMeal:Meal = null;
  addMeal(NewMeal:Meal){
    this.MealsList.push(NewMeal);
  }
-
+ showDetails(clickedMeal: Meal){
+     this.selectedMeal = clickedMeal;
+ }
+ finishedEditing() {
+    this.selectedMeal = null;
+  }
+deleteMeal(MealToDel:Meal){
+  var index: number = this.MealsList.indexOf(MealToDel);
+  this.MealsList.splice(index, 1);
+}
 }
